@@ -33,7 +33,7 @@ func (h *HandlerMovie) FindMovies(c echo.Context) error {
 	}
 
 	for i, p := range movies {
-		movies[i].Image = path_file + p.Image
+		movies[i].Image =  p.Image
 	}
 
 	return c.JSON(http.StatusOK, dto.SuccessResult{
